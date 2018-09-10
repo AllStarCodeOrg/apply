@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css?family=Libre+Baskerville:700|Montserrat');
+
+:root{
+    /* fonts */
+    --headerFont: 'Libre Baskerville', serif;
+    --bodyFont: 'Montserrat', sans-serif;
+    /* color palette */
+    --ascBlue:#51C1E9;
+    --primaryLight:#CCDBDC;
+    --primaryDark:#263D42;
+    --accent:#5DFDCB;
+    --alternate:#8E6C88;
+    /* spacing */
+    --smallPad: 8px;
+    --pad: 16px;
+}
+
+body{
+    margin: 0;
+}
+
+header, 
+h1, 
+h2, 
+h3,
+summary{
+    font-family: var(--headerFont);
+}
+
+p, 
+a, 
+span,
+li{
+    font-family: var(--bodyFont);
+}
+
+section{
+    border-bottom: 2px var(--accent) solid;
+}
+
+
+/* NAV BAR */
+/* NAV BAR END */
+
+/* FIXED APPLY */
+/* FIXED APPLY END */
+
+/* SUMMARY */
+.intro{
+    background: url(../../assets/1.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    height: 80vh;
+    background-position: center;
+    background-size: cover;
+}
+/* SUMMARY END */
