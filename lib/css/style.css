@@ -6,7 +6,7 @@
     --bodyFont: 'Montserrat', sans-serif;
     /* color palette */
     --ascBlue:#51C1E9;
-    --primaryLight:#CCDBDC;
+    --primaryLight:#FFFCF2;
     --primaryDark:#263D42;
     --accent:#5DFDCB;
     --alternate:#8E6C88;
@@ -17,6 +17,7 @@
 
 body{
     margin: 0;
+    background: var(--primaryLight);
 }
 
 header, 
@@ -25,6 +26,7 @@ h2,
 h3,
 summary{
     font-family: var(--headerFont);
+    color: var(--ascBlue);
 }
 
 p, 
@@ -32,12 +34,19 @@ a,
 span,
 li{
     font-family: var(--bodyFont);
+    color:var(--primaryDark);
 }
 
 section{
     border-bottom: 2px var(--accent) solid;
 }
 
+.parallax-back{
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
 
 /* NAV BAR */
 /* NAV BAR END */
@@ -47,11 +56,43 @@ section{
 
 /* SUMMARY */
 .intro{
-    background: url(../../assets/1.jpg);
-    background-attachment: fixed;
-    background-repeat: no-repeat;
+    background-image: url(../../assets/5.jpg);
     height: 80vh;
-    background-position: center;
-    background-size: cover;
 }
 /* SUMMARY END */
+
+/* STATS */
+.stats{
+    background-image: url(../../assets/2.jpg);
+    height: 400px;
+}
+/* STATS END */
+
+/* TESTIMONIALS */
+/* TESTIMONIALS END */
+
+/* VIDEO */
+.video{
+    background-image: url(../../assets/3.jpg);
+    height: 400px;
+}
+/* VIDEO END */
+
+/* PROJECTS */
+/* PROJECTS END */
+
+/* SKILLS */
+.skills{
+    background-image: url(../../assets/4.jpg);
+    height: 400px;
+}
+/* SKILLS END */
+
+/* BOTTOM APPLY */
+/* BOTTOM APPLY END */
+
+/* FAQ */
+summary:focus{
+    outline-color: var(--accent);
+}
+/* FAQ END */

@@ -7,7 +7,7 @@ All Star Code's application website for the 2019 Summer Intensive
 
 Color palette
 #51C1E9
-#CCDBDC
+#FFFCF2
 #8E6C88
 #263D42
 #5DFDCB
