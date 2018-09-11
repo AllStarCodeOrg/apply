@@ -3,7 +3,13 @@ All Star Code's application website for the 2019 Summer Intensive
 
 #To Do List
 - get assets
-- get favicon
+- fix first apply cursor registry
+- mockup testimonials
+
+
+#Extra
+- parallax on wording (scrolling into focus)
+- parallax on main "Apply"
 
 Color palette
 #51C1E9
