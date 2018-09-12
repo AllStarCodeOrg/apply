@@ -29,9 +29,10 @@
     --maxPad: calc(var(--pad) * 2);
     --nav-height: 60px;
     /* separator */
-    --sep: 2px solid var(--accent);
+    --sep: 2px solid var(--ascBlue);
     /* border */
     --radius: 33px;
+    --thinBox: 1px solid var(--alternate);
 }
 
 body{
@@ -65,7 +66,9 @@ section{
 
 section > header{
     font-size: 1.6em;
+    text-transform: uppercase;
 }
+
 .parallax-back{
     background-attachment: fixed;
     background-repeat: no-repeat;
@@ -73,6 +76,10 @@ section > header{
     background-size: cover;
 }
 
+.linker{
+    position: relative;
+    top: calc(0px - var(--nav-height));
+}
 /* NAV BAR */
 nav{
     position: fixed;
@@ -107,14 +114,39 @@ nav > a:first-child{
 }
 
 nav > a:first-child:hover{
-    /* color: var(--primaryLight); */
     font-size: 1.65em;
 }
 /* NAV BAR END */
 
 /* FIXED APPLY */
-.fixed-apply{
+#fixed-apply{
+    color: var(--primaryDark);
+    border: var(--sep);
+    border-radius: 25px 0 0 25px;
     position: fixed;
+    right: 0;
+    top: 15vh;
+    font: inherit;
+    padding: 1em 2em;
+    box-shadow: 3px 3px 4px var(--primaryDark);
+    text-shadow: none;
+    z-index: 100;
+    font-weight: bolder;
+    background-color: var(--accent);
+    transition: 
+        color 400ms ease-in-out, 
+        background-color 400ms ease-in-out,
+        transform 400ms ease-in-out;
+    transform: translateX(145px); 
+    text-decoration: none;
+    width: 60px;
+}
+
+#fixed-apply:hover{
+    text-decoration: none;
+    transform: translateX(0)!important;
+    color: var(--primaryLight);
+    background-color: var(--ascBlue);
 }
 /* FIXED APPLY END */
 
@@ -137,13 +169,15 @@ nav > a:first-child:hover{
     position: relative;
     text-decoration: none;
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: end
 }
 
 .main-apply{
     font-size: 14em;
     text-decoration: none;
     position: absolute;
-    width: 100%;
     text-align: center;
     font-style: italic;
     transition: color 300ms ease-in;
@@ -181,16 +215,41 @@ nav > a:first-child:hover{
 /* SUMMARY */
 .summary{
     flex-direction: row;
-    padding: var(--maxPad);
+    padding: var(--pad) var(--maxPad);
     justify-content: space-evenly;
 }
 .summary > article{
     width: 40%;
     text-align: center;
     padding: var(--smallPad);
-    border: 1px solid var(--primaryDark);
-    border-radius: var(--radius);
+    display: flex;
+    flex-direction: column;
 }
+
+.summary > article h2{
+    padding-bottom: var(--pad);
+}
+
+.summary p{
+    border-radius: var(--radius);
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: var(--smallPad) var(--pad);
+}
+
+.summary article:first-child > p{
+    border-top: var(--thinBox);
+    border-bottom: var(--thinBox);
+
+}
+
+.summary article:last-child >p{
+    border-top: var(--thinBox);
+    border-bottom: var(--thinBox);
+}
+
 /* SUMMARY END */
 
 /* STATS */
@@ -234,13 +293,28 @@ nav > a:first-child:hover{
 }
 /* STATS END */
 
-/* TESTIMONIALS */
-.testimonials{
-    height: 300px;
+/* ELIGIBILITY */
+.eligibility{
+    flex-direction: column;
     justify-content: center;
-    padding: var(--pad);
+    align-items: center;
+    padding: var(--pad) var(--maxPad);
 }
-/* TESTIMONIALS END */
+
+.eligibility article{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 75%;
+    text-align: center;
+}
+
+.important{
+    color: var(--alternate);
+    font-weight: bold;
+}
+/* ELIGIBILITY END */
 
 /* VIDEO */
 .video{
@@ -283,7 +357,9 @@ nav > a:first-child:hover{
     grid-template-columns: repeat(4,1fr);
     grid-template-rows: auto;
     box-sizing: border-box;
-    border: 1px solid var(--primaryDark);
+    border-top: var(--thinBox);
+    border-bottom: var(--thinBox);
+    border-radius: var(--radius);
 }
 .project-grid > article:nth-child(odd) .project-desc{
     grid-column: 1 / 4;
@@ -319,7 +395,7 @@ nav > a:first-child:hover{
 }
 
 .project-img{
-    width: 200px;
+    width: 160px;
     align-self: center;
     border-radius: 15px;
     padding: var(--smallPad);
@@ -328,7 +404,6 @@ nav > a:first-child:hover{
 
 /* SKILLS */
 .skills{
-    /* background-image: url(../../assets/4.jpg); */
     background: linear-gradient(
         rgba(38, 61, 66, 0.25), 
         rgba(38, 61, 66, 0.25)
@@ -346,6 +421,12 @@ nav > a:first-child:hover{
 
 .skills h2{
     margin: var(--pad);
+    /* text-shadow: 0 0 2px var(--primaryDark); */
+    text-shadow:
+        1px 1px 1px var(--primaryDark),
+        1px -1px 1px var(--primaryDark),
+        -1px 1px 1px var(--primaryDark),
+        -1px -1px 1px var(--primaryDark);
 }
 
 .skills-list{
@@ -369,31 +450,50 @@ nav > a:first-child:hover{
     min-height: 60px;
     min-width: 140px;
     user-select: none;
+    box-sizing: border-box;
+    padding: var(--smallPad);
 }
 /* SKILLS END */
 
+/* TESTIMONIALS */
+.testimonials{
+    height: 300px;
+    justify-content: center;
+    padding: var(--pad);
+}
+/* TESTIMONIALS END */
+
 /* BOTTOM APPLY */
 .apply{
+    background-image: url(../../assets/star.png);
+    background-color: var(--primaryDark);
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: var(--maxPad);
+    height: 300px;
 }
 
 .apply > a{
     font-size: 6em;
     font-family: Sudena;
     color: var(--accent);
+    text-shadow: 0 0 2px var(--primaryDark);
     transition: color 400ms ease;
 }
 
 .apply > a:hover{
-    color: var(--ascBlue);
+    color: var(--primaryLight);
 }
 
 .apply-extra-info{
     width: 50%;
+}
+
+.apply-extra-info p{
     text-align: center;
+    color:var(--alternate);
+    text-shadow: 0 0 1px var(--primaryDark);
 }
 
 /* BOTTOM APPLY END */
@@ -428,13 +528,29 @@ summary:focus{
 
 /* SOCIAL */
 
+.contact{
+    margin-bottom: var(--pad);
+}
+.contact header{
+    color: var(--primaryLight);
+    margin: var(--pad);
+}
+
+.contact a{
+    transition: color 400ms ease;
+}
+.contact a:hover{
+    color: var(--accent);
+    text-decoration: none;
+}
+
 footer{
 	color:var(--primaryLight);
 	background-color: var(--ascBlue);
 	font-family: var(--ascFont);
 	text-align: center;
 	font-size: 1.5em;
-	height:180px;
+	height: 250px;
 	margin-top: 25px;
 	display:flex;
 	align-items: center;

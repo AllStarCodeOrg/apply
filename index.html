@@ -9,24 +9,28 @@
     <!-- INCLUDE SEO META -->
     <!-- INCLUDE FACEBOOK META W/IMAGE -->
     <link rel="stylesheet" href="lib/css/style.css">
+    <script src="lib/js/main.js" defer></script>
 </head>
 
 <body>
     <main>
         <!-- NAV BAR -->
         <nav class="nav-bar">
-            <a href="#">Donate</a>
+            <a href="http://www.allstarcode.org/donate/" target="_blank">Donate</a>
+            <!-- 1 OUT OF 4 LINKS TO APPLY -->
             <a href="#">Apply</a>
-            <a href="#">Stats</a>
-            <a href="#">Skills</a>
-            <a href="#">FAQ</a>
-            <a href="#">Contact</a>
+            <a href="#stats">Stats</a>
+            <a href="#skills">Skills</a>
+            <a href="#faq">FAQ</a>
+            <a href="#contact">Contact</a>
             <!-- admissions@allstarcode.org -->
         </nav>
 
         <!-- FIXED APPLY -->
-        <a href="#" class="fixed-apply">Apply</a>
+        <!-- 2 OUT OF 4 LINKS TO APPLY -->
+        <a href="#" id="fixed-apply">Apply</a>
         <!-- INTRO HEADER -->
+        <!-- 3 OUT OF 4 LINKS TO APPLY -->
         <header class="intro parallax-back">
             <a href="#">
                 <p class="main-apply main-apply-bottom">Apply</p>
@@ -49,26 +53,33 @@
         </section>
 
         <!-- STATS -->
+        <div id="stats" class="linker"></div>
         <section class="stats parallax-back">
             <article>
-                <p class="stat-number">100</p>
-                <p class="stat">People</p>
+                <p class="stat-number">433</p>
+                <p class="stat">Alumni</p>
             </article>
             <article>
-                <p class="stat-number">100</p>
-                <p class="stat">People</p>
+                <p class="stat-number">210</p>
+                <p class="stat">Program Hours</p>
             </article>
             <article>
-                <p class="stat-number">100</p>
-                <p class="stat">People</p>
+                <p class="stat-number">30+</p>
+                <p class="stat">Projects</p>
             </article>
         </section>
 
-        <!-- TESTIMONIALS -->
-        <!-- https://html.com/tags/blockquote/ -->
-        <section class="testimonials">
-            <header>TESTIMONIALS</header>
-
+        <!-- ELIGIBILITY -->
+        <section class="eligibility">
+            <header>Eligibility</header>
+            <article>
+                <p>No coding experience necessary to apply</p>
+                <p class="important">Must be able to attend the entirety of the program (July 8-August 16 Mon-Fri 9AM-5PM)</p>
+                <p>Male</p>
+                <p>Current High School Sophomores and Juniors</p>
+                <p>Able to commute to either NYC or Pittsburgh daily during Summer 2019</p>
+                <p>Preference given to Black & Latino applicants</p>
+            </article>
         </section>
 
         <!-- VIDEO -->
@@ -79,7 +90,7 @@
 
         <!-- PROJECTS -->
         <section class="projects">
-            <header>PROJECTS</header>
+            <header>Student Demo Day projects from SI 2018</header>
             <div class="project-grid">
                 <article>
                     <div class="project-desc">
@@ -121,6 +132,7 @@
         </section>
 
         <!-- SKILLS -->
+        <div id="skills" class="linker"></div>
         <section class="skills parallax-back">
             <h2>SKILLS</h2>
             <ul class="skills-list">
@@ -147,15 +159,24 @@
             </ul>
         </section>
 
+        <!-- TESTIMONIALS -->
+        <!-- https://html.com/tags/blockquote/ -->
+        <section class="testimonials">
+                <header>TESTIMONIALS</header>
+    
+            </section>
+            
         <!-- BOTTOM APPLY -->
-        <section class="apply">
+        <section class="apply parallax-back">
+            <!-- 4 OUT OF 4 LINKS TO APPLY -->
             <a href="#">APPLY NOW!</a>
             <div class="apply-extra-info">
-                <p>Applications close at 11:59PM on March 31</p>
+                <p>Applications close at 11:59PM on March 28</p>
             </div>
         </section>
 
         <!-- FAQ -->
+        <div id="faq" class="linker"></div>
         <section class="faq">
             <h2>FAQ</h2>
             <article class="faqs">
@@ -246,7 +267,13 @@
         </section>
 
         <!-- SOCIAL MEDIA -->
+        <div id="contact" class="linker"></div>
         <footer>
+            <div id="contact"></div>
+            <article class="contact">
+                <header>CONTACT</header>
+                <a href="mailto:admissions@allstarcode.org">admissions@allstarcode.org</a>
+            </article>
             <div class="social">
                 <a href="http://www.allstarcode.org/" target="_blank">
                     <svg class="social-svg">

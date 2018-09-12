@@ -3,8 +3,8 @@ All Star Code's application website for the 2019 Summer Intensive
 
 #To Do List
 - get assets
-- fix first apply cursor registry
 - mockup testimonials
+- add links
 
 
 #Extra
