@@ -4,8 +4,8 @@ All Star Code's application website for the 2019 Summer Intensive
 #To Do List
 - get assets
 - mockup testimonials
-- add links
-
+- add image alts
+- add Google analytics
 
 #Extra
 - parallax on wording (scrolling into focus)

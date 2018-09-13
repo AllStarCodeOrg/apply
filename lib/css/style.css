@@ -31,6 +31,7 @@
     /* separator */
     --sep: 2px solid var(--ascBlue);
     /* border */
+    --smallRadius: 15px;
     --radius: 33px;
     --thinBox: 1px solid var(--alternate);
 }
@@ -299,6 +300,7 @@ nav > a:first-child:hover{
     justify-content: center;
     align-items: center;
     padding: var(--pad) var(--maxPad);
+    background-color: var(--primaryDark);
 }
 
 .eligibility article{
@@ -310,9 +312,17 @@ nav > a:first-child:hover{
     text-align: center;
 }
 
+.eligibility article p:nth-child(odd){
+    color: var(--accent);
+}
+.eligibility article p:nth-child(even){
+    color: var(--primaryLight);
+}
+
 .important{
-    color: var(--alternate);
+    /* color: var(--alternate); */
     font-weight: bold;
+    /* text-decoration: underline; */
 }
 /* ELIGIBILITY END */
 
@@ -397,7 +407,7 @@ nav > a:first-child:hover{
 .project-img{
     width: 160px;
     align-self: center;
-    border-radius: 15px;
+    border-radius: var(--smallRadius);
     padding: var(--smallPad);
 }
 /* PROJECTS END */
@@ -419,7 +429,7 @@ nav > a:first-child:hover{
     align-items: center;
 }
 
-.skills h2{
+.skills header{
     margin: var(--pad);
     /* text-shadow: 0 0 2px var(--primaryDark); */
     text-shadow:
@@ -457,9 +467,75 @@ nav > a:first-child:hover{
 
 /* TESTIMONIALS */
 .testimonials{
-    height: 300px;
     justify-content: center;
+    align-items: center;
     padding: var(--pad);
+    flex-direction: column;
+}
+
+.testimonials-container{
+    display: grid;
+    grid-template: auto / auto;
+    grid-gap: var(--pad);
+    padding: var(--pad);
+    width: 75%;
+}
+
+.testimonial{
+    display: grid;
+    grid-template: auto/repeat(4, 1fr);
+    box-sizing: border-box;
+    border-top: var(--thinBox);
+    border-bottom: var(--thinBox);
+    border-radius: var(--radius);
+}
+
+.test-desc{
+    grid-column: 2/5;
+    padding: var(--smallPad) var(--maxPad);
+    position: relative;
+}
+
+.test-desc h3{
+    font-style: italic;
+}
+
+.test-desc h3::before{
+    content:"-";
+    margin-left: var(--pad);
+}
+
+.test-desc blockquote{
+    position: relative;
+    text-align: justify;
+}
+
+.test-desc blockquote::before{
+    content:open-quote;
+    font-size: 4em;
+    color: var(--ascBlue);
+    line-height: 0;
+    position: absolute;
+    left: -26px;
+    top: 13px;
+}
+
+.test-desc blockquote::after{
+    content: close-quote;
+    font-size: 4em;
+    color: var(--ascBlue);
+    line-height: 0;
+    position: absolute;
+    right: -26px;
+    bottom: -17px;
+}
+
+.testimonial img{
+    width: 200px;
+    align-self: center;
+    border-radius: var(--smallRadius);
+    padding: var(--smallPad);
+    box-sizing: border-box;
 }
 /* TESTIMONIALS END */
 
