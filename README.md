@@ -3,21 +3,16 @@ All Star Code's application website for the 2019 Summer Intensive
 
 #To Do List
 - get assets
-- mockup testimonials
 - add image alts
+- bump font sizes
 - add Google analytics
+- Logo at top and on image (box)
+- Agree to stats ()
+- favicon
+- more animations
+- get all questions for FAQ
+
 
 #Extra
 - parallax on wording (scrolling into focus)
 - parallax on main "Apply"
-
-Color palette
-#51C1E9
-#FFFCF2
-#8E6C88
-#263D42
-#5DFDCB
-
-Font pair
-Header  -  'Libre Baskerville', serif;
-Body    -  'Montserrat', sans-serif;
