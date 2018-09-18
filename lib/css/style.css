@@ -177,7 +177,7 @@ nav > a:hover{
     background: linear-gradient(
         rgba(38, 61, 66, 0.15), 
         rgba(38, 61, 66, 0.15)
-      ), url(../../assets/5.jpg);
+      ), url(../../assets/header.jpg);
     background-position: left center;
     background-attachment: unset;
     background-repeat: no-repeat;
@@ -281,12 +281,11 @@ nav > a:hover{
 
 /* STATS */
 .stats{
-    /* background-image: url(../../assets/2.jpg); */
     background: linear-gradient(
         rgba(38, 61, 66, 0.25), 
         rgba(38, 61, 66, 0.25)
       ),
-      url(../../assets/2.jpg);
+      url(../../assets/concentrate.jpg);
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: center;
@@ -361,7 +360,7 @@ nav > a:hover{
         rgba(38, 61, 66, 0.25), 
         rgba(38, 61, 66, 0.25)
       ),
-      url(../../assets/3.jpg);
+      url(../../assets/hands_up.jpg);
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: right;
@@ -467,7 +466,7 @@ nav > a:hover{
         rgba(38, 61, 66, 0.25), 
         rgba(38, 61, 66, 0.25)
       ),
-      url(../../assets/4.jpg);
+      url(../../assets/demo.jpg);
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: center;
@@ -665,6 +664,11 @@ summary:focus{
     font-size: 1.1rem;
     padding: var(--smallPad) 0 var(--smallPad) 1.5em;
 }
+
+.ans a,
+.ans span{
+    color: var(--ascBlue);
+}
 /* FAQ END */
 
 /* SOCIAL */
@@ -683,6 +687,7 @@ summary:focus{
         border-bottom-color 400ms ease;
     text-decoration: none;
     border-bottom: solid 1px var(--primaryDark);
+    padding-bottom: 4px;
 }
 .contact a:hover{
     color: var(--alternate);
