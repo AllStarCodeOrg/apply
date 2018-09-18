@@ -350,9 +350,7 @@ nav > a:hover{
 }
 
 .important{
-    /* color: var(--alternate); */
     font-weight: bold;
-    /* text-decoration: underline; */
 }
 /* ELIGIBILITY END */
 
@@ -366,7 +364,7 @@ nav > a:hover{
       url(../../assets/3.jpg);
     background-attachment: fixed;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: right;
     background-size: cover;
     height: 600px;
     justify-content: center;
@@ -409,6 +407,11 @@ nav > a:hover{
     position: relative;
 }
 
+.test-desc.parent{
+    grid-column: 1/5;
+    padding: var(--pad);
+}
+
 .test-desc h3{
     font-style: italic;
 }
@@ -421,6 +424,11 @@ nav > a:hover{
 .test-desc blockquote{
     position: relative;
     text-align: justify;
+}
+
+.test-desc blockquote span{
+    color:var(--ascBlue);
+    font-weight: bold;
 }
 
 .test-desc blockquote::before{
@@ -621,6 +629,7 @@ nav > a:hover{
     text-align: center;
     color:var(--primaryLight);
     text-shadow: 0 0 1px var(--primaryDark);
+    font-size: 1.5rem;
 }
 
 /* BOTTOM APPLY END */
