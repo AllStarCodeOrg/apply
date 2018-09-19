@@ -6,7 +6,6 @@ https://allstarcodeorg.github.io/apply2019/
 
 #To Do List
 - add Google analytics
-- mouse over descriptions for outcomes
 - make mobile ready
 
 #Extra

@@ -513,6 +513,33 @@ nav > a:hover{
     user-select: none;
     box-sizing: border-box;
     padding: var(--smallPad);
+    position: relative;
+    transition: background-color 500ms ease-out;
+}
+
+.skills-list > li:hover {
+    background-color:rgba(81, 193, 233, 1);
+}
+
+.skills-list > li::after{
+    content:attr(data-info);
+    min-width: 140px;
+    display: block;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 500ms ease-in-out;
+    left: calc(100% - var(--pad));
+    border-radius: var(--smallRadius);
+    background-color: var(--primaryDark);
+    z-index: 10;
+    padding: var(--smallPad);
+    box-sizing: content-box;
+    pointer-events: none;
+    /* font-size: .75em; */
+}
+
+.skills-list > li:hover::after{
+    opacity: 1;
 }
 /* SKILLS END */
 
@@ -672,6 +699,11 @@ summary:focus{
 .ans a,
 .ans span{
     color: var(--ascBlue);
+}
+
+span.italics{
+    color: var(--primaryDark);
+    font-style: italic;
 }
 /* FAQ END */
 
