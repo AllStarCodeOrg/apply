@@ -256,6 +256,10 @@ nav > a:hover{
     height: 100%;
 }
 
+.summary .description{
+    text-align: justify;
+}
+
 .description p:not(:last-child)::after{
     content:"";
     display: block;
