@@ -5,8 +5,9 @@ All Star Code's application website for the 2019 Summer Intensive
 https://allstarcodeorg.github.io/apply2019/
 
 #To Do List
-- add Google analytics
 - make mobile ready
+- Site Visits and Guest Speakers
+- link videos like logical thinking to youtube videos
 
 #Extra
 - more animations

@@ -552,6 +552,15 @@ nav > a:hover{
     padding: var(--pad);
 }
 
+.projects .description{
+    width: 75%;
+    max-width: 600px;
+}
+
+.projects .description:not(:last-child){
+    margin-bottom: var(--smallPad);
+}
+
 .project-grid{
     display: grid;
     width: 75%;
