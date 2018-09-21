@@ -6,8 +6,6 @@ https://allstarcodeorg.github.io/apply2019/
 
 #To Do List
 - make mobile ready
-- Site Visits and Guest Speakers
-- link videos like logical thinking to youtube videos
 
 #Extra
 - more animations

@@ -201,6 +201,7 @@ nav > a:hover{
     position: relative;
     text-decoration: none;
     font-size: 3rem;
+    text-align: center;
     color: var(--primaryLight);
     border-bottom: 4px solid var(--ascBlue);
     text-shadow:
@@ -518,10 +519,10 @@ nav > a:hover{
 }
 
 .skills-list > li:hover {
-    background-color:rgba(81, 193, 233, 1);
+    background-color:var(--alternate);
 }
 
-.skills-list > li::after{
+.skills-list > li[data-info]::after{
     content:attr(data-info);
     min-width: 140px;
     display: block;
@@ -535,10 +536,9 @@ nav > a:hover{
     padding: var(--smallPad);
     box-sizing: content-box;
     pointer-events: none;
-    /* font-size: .75em; */
 }
 
-.skills-list > li:hover::after{
+.skills-list > li[data-info]:hover::after{
     opacity: 1;
 }
 /* SKILLS END */
@@ -645,6 +645,7 @@ nav > a:hover{
     align-items: center;
     padding: var(--maxPad);
     height: 300px;
+    text-align: center;
 }
 
 .apply > a{
@@ -710,10 +711,42 @@ summary:focus{
     color: var(--ascBlue);
 }
 
+.ans ul{
+    position: relative;
+}
+
+.ans li[data-info]{
+    border-bottom: 1px dotted var(--accent);
+    width: fit-content;
+}
+
+.ans li[data-info]::after{
+    content: attr(data-info);
+    width: 200px;
+    display: block;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 500ms ease-in-out;
+    left: 276px;
+    top: 0;
+    border-radius: var(--smallRadius);
+    background-color: var(--primaryDark);
+    z-index: 10;
+    padding: var(--smallPad);
+    box-sizing: content-box;
+    pointer-events: none;
+    color: var(--primaryLight);
+}
+
+.ans li[data-info]:hover::after{
+    opacity: 1;
+}
+
 span.italics{
     color: var(--primaryDark);
     font-style: italic;
 }
+
 /* FAQ END */
 
 /* SOCIAL */
@@ -794,3 +827,309 @@ footer::before{
 }
 
 /* SOCIAL END */
+
+/* RESPONSIVE */
+
+@media(max-width: 1000px){
+    .skills-list{
+        display: inline;
+        padding: var(--pad);
+        position: initial;
+        background-color: rgba(59, 61, 66, 0.90);
+        border-radius: var(--radius);
+        border: var(--sep);
+    }
+
+    .skills-list li{
+        min-height: initial;
+        min-width: initial;
+        border: none;
+        padding: 0;
+        display: inline;
+        background-color: transparent;
+        pointer-events: none;
+        transition: none;
+        text-align: justify;
+        font-size: 1.6rem;
+    }
+    
+    .skills-list li:nth-child(odd){
+        color: var(--accent);
+    }
+
+    .skills-list > li[data-info]::after{
+        content: ",";
+        transition: none;
+        min-width: initial;
+        display: inline;
+        position: initial;
+        opacity: 1;
+        border-radius: 0;
+        background-color: transparent;
+        z-index: 10;
+        padding: 0;
+        box-sizing: content-box;
+        pointer-events: none;
+    }
+
+    .skills-list > li[data-info]:last-child::after{
+        content: "";
+    }
+}
+
+@media(max-width: 830px){
+    .spacer{
+        flex: 0;
+    }
+
+    nav{
+        justify-content: space-evenly;
+    }
+
+    nav > a{
+        margin: 0!important;
+    }
+
+    #fixed-apply{
+        font-size: 2rem;
+        padding: var(--smallPad) var(--pad);
+        width: 110px;
+    }
+
+    .summary{
+        flex-direction: column;
+    }
+    .summary > article header {
+        font-size: 3rem;
+    }
+    .summary .description p{
+        font-size: 1.5rem;
+    }
+
+    .stats > article{
+        margin: 10px;
+        flex: 1;
+    }
+
+    .eligibility article{
+        width: 100%;
+    }
+
+    .eligibility article p{
+        letter-spacing: 2px;
+        font-size: 1.5rem;
+    }
+
+    .eligibility article p{
+        margin-top: 20px;
+    }
+
+    .video{
+        height: initial;
+        padding: var(--pad) 0;
+        background: var(--ascBlue);
+    }
+
+    .testimonials-container{
+        width: 100%;
+    }
+
+    .testimonial img{
+        display: none;
+    }
+
+    .test-desc{
+        grid-column: 1/5;
+        padding: var(--pad);
+    }
+
+    .test-desc h2,
+    .test-desc h3{
+        font-size: 2rem;
+    }
+    .test-desc blockquote{
+        font-size: 1.5rem;
+    }
+
+    .test-desc blockquote::before{
+        left: -45px;
+        top: 24px;
+    }
+
+    .skills{
+        height: initial;
+        padding: var(--pad);
+    }
+    
+    .skills-list{
+        width: 90%;
+    }
+
+    .skills-list li{
+        font-size: 2rem;
+    }
+
+    .projects .description{
+        width: 90%;
+        font-size: 1.5rem;
+    }
+
+    .project-img, .project-links{
+        display: none;
+    }
+
+    .project-grid > article{
+        grid-template: auto/auto;
+    }
+
+    .project-desc p{
+        font-size: 1.3rem;
+    }
+
+    .faqs{
+        width: 90%;
+    }
+
+    .faqs summary{
+        font-size: 2.3rem;
+    }
+
+    .ans,
+    .ans p,
+    .ans li{
+        font-size: 1.5rem;
+    }
+
+    footer{
+        height: 400px;
+    }
+
+    .contact a{
+        font-size: 2rem;
+    }
+
+    .social{
+        align-items: center;
+        width: 100%;
+        max-width: initial;
+    }
+
+    .social-svg{
+        width: 100px;
+        height: 100px;
+    }
+
+    #copyright{
+        font-size: 1.5rem;
+    }
+
+    video {
+        width: 100%    !important;
+        height: auto   !important;
+      }
+}
+
+@media(max-width: 780px){
+    nav a:not(:first-child){
+        display: none;
+    }
+
+    nav{
+        justify-content: flex-start;
+    }
+
+    #main-apply{
+        width: 75%;
+        border: none;
+    }
+}
+
+@media(max-width: 400px){
+    #box_logo{
+        width: 250px;
+    }
+
+    .summary{
+        padding: var(--smallPad) 0;
+    }
+
+    .summary article .description{
+        border: none!important;
+        padding: 0;
+    }
+
+    .summary .description p{
+        font-size: 1.1rem;
+    }
+
+    .stats{
+        flex-direction: column;
+        padding: var(--pad);
+    }
+
+    .stats article{
+        padding: 0;
+        margin: 0;
+        border-radius: 0;
+        border: none;
+        width: 100%;
+    }
+
+    .stats article:not(:last-child){
+        border-bottom: dashed 1px var(--accent);
+    }
+
+    .test-desc blockquote{
+        font-size: 1.1rem;
+    }
+
+    .skills-list li{
+        font-size: 1.3rem;
+    }
+
+    .project-grid{
+        width: 100%;
+    }
+
+    .projects .description{
+        font-size: 1.1rem;
+    }
+
+    .project-desc p{
+        font-size: 1rem;
+    }
+
+    .faqs summary{
+        font-size: 1.5rem;
+    }
+
+    .ans, 
+    .ans p, 
+    .ans li{
+        font-size: 1.1rem;
+    }
+
+    .ans li[data-info]{
+        border: none;
+    }
+
+    .ans li[data-info]::after{
+        content:"";
+        display: none;
+    }
+
+    .contact a{
+        font-size: 1.5rem;
+    }
+
+    .social-svg{
+        width: 50px;
+        height: 50px;
+    }
+
+    #copyright{
+        width: 80%;
+    }
+}
+
+/* RESPONSIVE END */
