@@ -14,10 +14,10 @@
   }
 :root{
     /* fonts */
-    --headerFont: 'condensed', serif;
-    --bodyFont: 'helvetica', sans-serif;
-    /* --headerFont: 'openDyslexic', serif;
-    --bodyFont: 'openDyslexic', sans-serif; */
+    /* --headerFont: 'condensed', serif; */
+    /* --bodyFont: 'helvetica', sans-serif; */
+    --headerFont: 'openDyslexic', serif;
+    --bodyFont: 'openDyslexic', sans-serif;
     /* color palette */
     --ascBlue:#51C1E9;
     --primaryLight:#FFFFFF;
