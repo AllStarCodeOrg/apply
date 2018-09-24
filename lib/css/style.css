@@ -8,10 +8,16 @@
     font-family: 'helvetica';
     src: url('../../assets/fonts/HelveticaNeue-Medium.ttf') format('truetype');
   }
+@font-face {
+    font-family: 'openDyslexic';
+    src: url('../../assets/fonts/OpenDyslexic-Regular.otf') format('opentype');
+  }
 :root{
     /* fonts */
     --headerFont: 'condensed', serif;
     --bodyFont: 'helvetica', sans-serif;
+    /* --headerFont: 'openDyslexic', serif;
+    --bodyFont: 'openDyslexic', sans-serif; */
     /* color palette */
     --ascBlue:#51C1E9;
     --primaryLight:#FFFFFF;
@@ -79,6 +85,7 @@ footer .contact header
 {
     font-size: 3rem;
     text-transform: uppercase;
+    text-align: center;
 }
 
 .parallax-back{
@@ -148,7 +155,6 @@ nav > a:hover{
     position: fixed;
     right: 0;
     top: 15vh;
-    font: inherit;
     padding: 1em 2em;
     box-shadow: 3px 3px 4px var(--primaryDark);
     text-shadow: none;
@@ -650,7 +656,6 @@ nav > a:hover{
 
 .apply > a{
     font-size: 6rem;
-    font-family: Sudena;
     color: var(--accent);
     text-shadow: 0 0 2px var(--primaryDark);
     transition: color 400ms ease;
@@ -662,7 +667,6 @@ nav > a:hover{
 
 .apply-extra-info{
     font-size: 1.4rem;
-    width: 50%;
 }
 
 .apply-extra-info p{
@@ -1099,6 +1103,14 @@ footer::before{
         font-size: 1rem;
     }
 
+    .apply > a{
+        font-size: 4rem;
+    }
+
+    .apply-extra-info{
+        width: 100%;
+    }
+
     .faqs summary{
         font-size: 1.5rem;
     }
@@ -1132,4 +1144,43 @@ footer::before{
     }
 }
 
+@media(max-width: 400px){
+    .intro{
+        height: initial;
+        padding-bottom: var(--smallPad);
+    }
+    #main-apply{
+        width: 100%;
+        font-size: 2.5rem;
+    }
+
+    .test-desc blockquote::before,
+    .test-desc blockquote::after
+    {
+        display: none;
+    }
+
+    .test-desc h2,
+    .test-desc h3
+    {
+        font-size: 1.7rem;
+        float: left;
+    }
+    .test-desc h2{
+        display: inline;
+    }
+
+    .test-desc h3::after{
+        content:"";
+        clear: both;
+    }
+    .test-desc blockquote{
+        margin:0;
+        display: inline-block;
+    }
+
+    .contact a{
+        font-size: 1.3rem;
+    }
+}
 /* RESPONSIVE END */

@@ -5,8 +5,13 @@ All Star Code's application website for the 2019 Summer Intensive
 https://allstarcodeorg.github.io/apply2019/
 
 #To Do List
-- make mobile ready
+- load smaller images for mobile
+- Add lateness/expulsion policy?
+- Statement of values?
+
 
 #Extra
 - more animations
+- change font to be more readable (like typeform)
+<!-- https://www.dyslexiefont.com/en/typeface/ -->
 - parallax on wording (scrolling into focus)
