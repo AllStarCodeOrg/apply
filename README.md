@@ -5,10 +5,7 @@ All Star Code's application website for the 2019 Summer Intensive
 https://allstarcodeorg.github.io/apply2019/
 
 #To Do List
-- load smaller images for mobile
-- Add lateness/expulsion policy?
 - Statement of values?
-- INCLUDE SEO META
 
 #Extra
 - more animations
