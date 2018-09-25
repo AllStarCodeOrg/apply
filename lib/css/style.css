@@ -717,6 +717,7 @@ summary:focus{
 
 .ans ul{
     position: relative;
+    margin: 0;
 }
 
 .ans li[data-info]{

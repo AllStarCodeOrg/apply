@@ -8,7 +8,7 @@ https://allstarcodeorg.github.io/apply2019/
 - load smaller images for mobile
 - Add lateness/expulsion policy?
 - Statement of values?
-
+- INCLUDE SEO META
 
 #Extra
 - more animations
