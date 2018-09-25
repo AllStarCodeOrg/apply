@@ -6,6 +6,7 @@ https://allstarcodeorg.github.io/apply2019/
 
 #To Do List
 - Statement of values?
+- travel can exceed 1 hour
 
 #Extra
 - more animations
