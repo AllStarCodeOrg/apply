@@ -97,6 +97,34 @@ footer .contact header
     position: relative;
     top: calc(0px - var(--nav-height));
 }
+
+/* ACCESSIBILITY */
+
+.social a:focus,
+.contact a:focus,
+nav a:focus,
+#fixed-apply:focus,
+.project-links a:focus,
+.project-img a:focus,
+.apply a:focus
+{
+    outline-color: var(--accent);
+    outline-style: dashed;
+    outline-width: 3px;
+}
+.intro a:focus{
+    outline-color: var(--primaryLight);
+    outline-style: dashed;
+    outline-width: 3px;
+}
+
+#fixed-apply:focus{
+    transform: translateX(15px)!important;
+}
+
+
+/* ACCESSIBILITY END */
+
 /* NAV BAR */
 nav{
     position: fixed;
