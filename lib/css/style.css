@@ -303,7 +303,7 @@ nav > a:hover{
 }
 
 .summary .description{
-    text-align: justify;
+    /* text-align: justify; */
 }
 
 .description p:not(:last-child)::after{
@@ -492,9 +492,17 @@ nav > a:hover{
     margin-left: var(--pad);
 }
 
+.long-title{
+    display: block;
+}
+
+.abbr-title{
+    display: none;
+}
+
 .test-desc blockquote{
     position: relative;
-    text-align: justify;
+    /* text-align: justify; */
 }
 
 .test-desc blockquote span{
@@ -524,7 +532,6 @@ nav > a:hover{
 
 .testimonial img{
     width: 200px;
-    height: 200px;
     align-self: center;
     border-radius: 50%;
     border: var(--thinBox);
@@ -925,6 +932,7 @@ footer::before{
         background-color: rgba(59, 61, 66, 0.90);
         border-radius: var(--radius);
         border: var(--sep);
+        text-align: center;
     }
 
     .skills-list li{
@@ -936,7 +944,6 @@ footer::before{
         background-color: transparent;
         pointer-events: none;
         transition: none;
-        text-align: justify;
         font-size: 1.6rem;
     }
     
@@ -1021,8 +1028,17 @@ footer::before{
         width: 100%;
     }
 
+    .testimonial{
+        display: inline;
+    }
+
     .testimonial img{
-        display: none;
+        display: block;
+        float: left;
+        border-radius: var(--radius);
+        margin: var(--pad) var(--smallPad) 10px var(--smallPad);
+        width: 30%;
+        min-width: 128px;
     }
 
     .test-desc{
@@ -1034,13 +1050,17 @@ footer::before{
     .test-desc h3{
         font-size: 2rem;
     }
+
     .test-desc blockquote{
         font-size: 1.5rem;
     }
 
-    .test-desc blockquote::before{
-        left: -45px;
-        top: 24px;
+    .test-desc blockquote::before,
+    .test-desc blockquote::after
+    {
+        /* left: -45px;
+        top: 24px; */
+        display: none;
     }
 
     .skills{
@@ -1116,6 +1136,11 @@ footer::before{
       }
 }
 
+@media(max-width: 700px){
+    .test-desc blockquote{
+        margin: 24px var(--smallPad) 0 var(--smallpad);
+    }
+}
 @media(max-width: 780px){
     nav a:not(:first-child){
         display: none;
@@ -1165,6 +1190,23 @@ footer::before{
 
     .stats article:not(:last-child){
         border-bottom: dashed 1px var(--accent);
+    }
+
+    .test-desc h3,
+    .test-desc h2{
+        font-size: 1.6rem;
+    }
+
+    .test-desc h3::before{
+        display: none;
+    }
+    
+    .long-title{
+        display: none;
+    }
+    
+    .abbr-title{
+        display: block;
     }
 
     .test-desc blockquote{
@@ -1238,6 +1280,11 @@ footer::before{
         font-size: 2.5rem;
     }
 
+    .testimonial img{
+        margin: var(--smallPad) auto 0 auto;
+        float: none;
+    }
+
     .test-desc blockquote::before,
     .test-desc blockquote::after
     {
@@ -1247,17 +1294,13 @@ footer::before{
     .test-desc h2,
     .test-desc h3
     {
-        font-size: 1.7rem;
-        float: left;
+        font-size: 1.3rem;
     }
+
     .test-desc h2{
         display: inline;
     }
 
-    .test-desc h3::after{
-        content:"";
-        clear: both;
-    }
     .test-desc blockquote{
         margin:0;
         display: inline-block;
