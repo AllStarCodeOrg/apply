@@ -1161,6 +1161,18 @@ footer::before{
     .test-desc blockquote{
         margin: 24px var(--smallPad) 0 var(--smallpad);
     }
+
+    .ans li[data-info]{
+        border: none;
+    }
+
+    .faqs{
+        width: 100%;
+    }
+
+    .ans{
+        padding: 0;
+    }
 }
 
 @media(max-width: 500px){
@@ -1315,7 +1327,7 @@ footer::before{
     .project-desc{
         padding: 0;
     }
-    
+
     .contact a{
         font-size: 1.3rem;
     }
