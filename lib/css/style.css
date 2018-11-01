@@ -1076,14 +1076,18 @@ footer::before{
         font-size: 2rem;
     }
 
+    .project-grid .project-desc{
+        grid-column: initial!important;
+        order:1;
+    }
     .projects .description{
         width: 90%;
         font-size: 1.5rem;
     }
 
-    .project-img, .project-links{
+    /* .project-img, .project-links{
         display: none;
-    }
+    } */
 
     .project-grid > article{
         grid-template: auto/auto;
@@ -1136,11 +1140,6 @@ footer::before{
       }
 }
 
-@media(max-width: 700px){
-    .test-desc blockquote{
-        margin: 24px var(--smallPad) 0 var(--smallpad);
-    }
-}
 @media(max-width: 780px){
     nav a:not(:first-child){
         display: none;
@@ -1157,6 +1156,13 @@ footer::before{
         text-decoration: underline;
     }
 }
+
+@media(max-width: 700px){
+    .test-desc blockquote{
+        margin: 24px var(--smallPad) 0 var(--smallpad);
+    }
+}
+
 @media(max-width: 500px){
     #box_logo{
         width: 250px;
@@ -1306,6 +1312,10 @@ footer::before{
         display: inline-block;
     }
 
+    .project-desc{
+        padding: 0;
+    }
+    
     .contact a{
         font-size: 1.3rem;
     }
