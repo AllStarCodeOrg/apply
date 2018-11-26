@@ -496,7 +496,7 @@ nav > a:hover{
     display: block;
 }
 
-.abbr-title{
+.abbr-title-short{
     display: none;
 }
 
@@ -1041,6 +1041,14 @@ footer::before{
         min-width: 128px;
     }
 
+    .abbr-title-long{
+        display: none;
+    }
+
+    .abbr-title-short{
+        display: initial;
+    }
+
     .test-desc{
         grid-column: 1/5;
         padding: var(--pad);
@@ -1084,10 +1092,6 @@ footer::before{
         width: 90%;
         font-size: 1.5rem;
     }
-
-    /* .project-img, .project-links{
-        display: none;
-    } */
 
     .project-grid > article{
         grid-template: auto/auto;
@@ -1223,7 +1227,7 @@ footer::before{
         display: none;
     }
     
-    .abbr-title{
+    .abbr-title-short{
         display: block;
     }
 
