@@ -1,8 +1,8 @@
-# apply2019
-All Star Code's application website for the 2019 Summer Intensive
+# apply2020
+All Star Code's application website for the 2020 Summer Intensive
 
 #MAIN LINK
-https://allstarcodeorg.github.io/apply2019/
+https://allstarcodeorg.github.io/apply2020/
 
 #To Do List
 - change font to be more readable (like typeform)
