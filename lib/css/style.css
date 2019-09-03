@@ -823,7 +823,6 @@ footer {
     font-family: var(--ascFont);
     text-align: center;
     font-size: 1.5em;
-    height: 250px;
     margin-top: 25px;
     display: flex;
     align-items: center;
