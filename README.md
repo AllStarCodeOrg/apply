@@ -26,7 +26,7 @@ https://allstarcodeorg.github.io/apply2020/
 - Relocate eligibility and dates to top (July 12th to August 20th) (done)
 - Remove "able to commute" and replace with "able to participate in live 3-hour remote technical sessions and 1 hour core skills session. (done)
 - Replace the All Star Outcomes section with 6 week overview (done)
-- Move "App. for 2021 Virtual Summer Intensive" further down...
+- Move "App. for 2021 Virtual Summer Intensive" further down... (seems fine where it is now? Done.)
 - Include two-part application process 
 - Improve site responsivess and have it look the same on different devices!
 
