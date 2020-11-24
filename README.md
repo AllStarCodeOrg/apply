@@ -20,7 +20,7 @@ https://allstarcodeorg.github.io/apply2020/
 
 # Apply 2021 Update Features:
 # To Do List
-- Add 2020 virtual SI picture
+- Add 2020 virtual SI picture (done)
 - Change projects to 2020 (check the demo-day database) (done)
 - Add the word "Virtual" in front of SI (done)
 - Relocate eligibility and dates to top (July 12th to August 20th) (done)
