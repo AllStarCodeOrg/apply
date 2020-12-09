@@ -192,14 +192,14 @@ nav>a:hover {
 /* INTRO */
 
 .intro {
-    background: linear-gradient( rgba(38, 61, 66, 0.15), rgba(38, 61, 66, 0.15)), url(../../assets/ApplyPageImage.png);
+    background: linear-gradient( rgba(38, 61, 66, 0.15), rgba(38, 61, 66, 0.15)), url(../../assets/ApplyPagePNG.png);
     background-position: left center;
     background-attachment: unset;
     background-repeat: no-repeat;
     background-size: cover;
-    opacity: 0.8;
     height: 100vh;
     min-height: 400px;
+    /* opacity: 0.5; */
     padding-top: var(--nav-height);
     display: flex;
     flex-direction: column;
@@ -211,7 +211,7 @@ nav>a:hover {
 
 @media (max-width: 400px) {
     .intro {
-        background: linear-gradient( rgba(38, 61, 66, 0.15), rgba(38, 61, 66, 0.15)), url(../../assets/ApplyPageImage.png);
+        background: linear-gradient( rgba(126, 148, 153, 0.15), rgba(38, 61, 66, 0.15)), url(../../assets/ApplyPageMobile.png);
         background-position: left center;
         background-attachment: unset;
         background-repeat: no-repeat;
